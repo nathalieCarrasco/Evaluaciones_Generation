@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>evaluacion 01 caso practico</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      // defino variables de entrada al usuario
+
+      var diaSemana = prompt("ingresa el dia de la semana", "lunes");
+      var productos = [1000, 2000, 300, 400, 300]; // total deberia ser 4000
+      var cantidadProducts = parseInt(
+        prompt("ingrese la cantidad de productos a comprar"),
+        1
+      );
+
+      // funcion para calcular suma total y descuentos por dias
+      // martes & jueves
+/* 
+      function totalCompra(dia, Arrproductos) { //losparametros a entrar
+            var total = 0; // debe iniciar sin monto para poder calcular luego nose como agregar la cantidad
+            var sumaTotal = 0;
+        // acumulativo total sin descuentos aplicar
+        // intento realizar ciclo for aunque aun nose como pedir que ingrese valores y cantidad por usuario pruebo con arrays fijo
+
+        for (
+          let i = 0; i < Arrproductos.lenght;i++ // recorro arrays para calcular total
+        ) {
+          // realizar calculos acumulativos y condiciones
+
+          sumaTotal = sumaTotal + Arrproductos[i];
+          total = sumaTotal;
+
+          // realizar con if para martes y jueves
+        }
+        return sumaTotal;
+      }
+      // llamr a la funcion para probar
+      var totalFinal = totalCompra(diaSemana, productos);
+      console.log("el total de la compra realizada es :", totalFinal); // algo hago mal que da cero arreglar
+ */
+  
+      /*   while(prod <=cantidadProducto){
+        var Precios =[]
+      } */
+      /*    function ingresoProductos(cantidadProducto) {
+        for (i = 0; i >= cantidadProducto; i++) var productos = [];
+        var product = parseInt(prompt("ingrese el valor del producto", i));
+      }
+      ingresoProductos(cantidadProducto); */
+
+      // calcular el total de productos a ingresar
+
+/*       
+      // ejercicio maximo arrays 
+      var numero = [2,5667,324,60,30,2754] 
+      function maximoNumber(unArreglo){
+       var maximo = Math.max(...numero)
+       return maximo
+      }
+       // creo variable para maximo y no perder dato 
+       var valorMaximo = maximoNumber(numero);
+       console.log("el maximo valor de este arreglo es :",valorMaximo);
+
+
+      //hacer lo mismo para minimo en funcion del dato
+       */
+    </script>
+  </body>
 </html>
