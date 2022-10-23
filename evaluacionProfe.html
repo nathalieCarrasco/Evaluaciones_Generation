@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
-<script>
-// solucion Desbloqueo siguiendo clase ayuda resolucion 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluacion 1 post desbloqueo Nathalie C.</title>
+  </head>
+  <body>
+    <script>
+      // solucion Desbloqueo siguiendo clase ayuda resolucion
 
-/* Don José todos los martes y jueves realiza un 20% de descuento en el total de las
+      /* Don José todos los martes y jueves realiza un 20% de descuento en el total de las
 compras, crea una función la cual debe recibir un parámetro del día y el arreglo de
 valores de los productos a comprar, esta debe retornar el total final de la compra según
 corresponda o no descuento */
 
-
-
+      /* 
 var dia= "Martes";//"LUNES"//1=lunes.. 2=martes y 4=jueves ; MaRtEs -> martes;
         var productos = [1000,500,650,8000,2,8];//10150
 
@@ -36,13 +35,109 @@ var dia= "Martes";//"LUNES"//1=lunes.. 2=martes y 4=jueves ; MaRtEs -> martes;
             return totalFinalCompra;
         }
         var total= calculoTotalCompra(dia,productos);
-        console.log("El total de la compra es",total);
+        console.log("El total de la compra es",total); */
+
+      // desarrollo post desbloqueo
+
+      /*         Don José todos los martes y jueves realiza un 20% de descuento en el total de las
+compras, crea una función la cual debe recibir un parámetro del día y el arreglo de
+valores de los productos a comprar, esta debe retornar el total final de la compra según
+corresponda o no descuento.  integro ejericicio 2 a la misma function 
+Don José hace un 5% de descuento a los clientes que compran más de 3 productos y al
+menos uno de ellos tiene un valor mayor a 10.000, realiza una función que calcule el
+total verificando si corresponde o no el descuento.*/
 
 
-        // desarrollo post desbloqueo
-        
+     
+    var diaSemana = prompt("ingresa el dia de la semana", "LUNES");
+    var productos = [900,100,10010,990]; // total deberia ser 12000
 
-</script>
+        function totalCompra(dia, Arrproductos) {
+        var total = 0; 
+        var sumaTotal = 0;
+        var contador =0
+        var mayorDiezmil=false
+        for ( let i = 0;i < Arrproductos.length; i++ ) {
+          // realizar calculos acumulativos y condiciones
+          sumaTotal = sumaTotal + Arrproductos[i];
+          if(Arrproductos[i]>10000){
+                    mayorDiezmil=true;
+                    contador++;
+                }
+           }
+           // realizar con if para martes y jueves .toUpperCase()= devulve MAYUSCULAS
+        if(dia.toUpperCase() =="MARTES" || dia.toUpperCase()=="JUEVES"){
+            total = sumaTotal * 0.8
+        }
+        else{
+            total=sumaTotal
+        }
+        // condicion ejercicio 2 adicional 
+        if(Arrproductos.length >3 && contador>0){
+        total = total*0.95
+        }
+        return total;
+      }
+      // llamr a la funcion para probar
+      var totalFinal = totalCompra(diaSemana, productos);
+      console.log("el total de la compra realizada es :", totalFinal); 
+
+    /*
+    Se desea tener una función verificadora encargada de revisar si dentro de el arreglo de
+valores de los productos a comprar no existan valores negativos ingresados por error,
+en caso de no existir debe retornar un mensaje de éxito, en caso contrario debe retornar
+un mensaje de error junto con el número negativo y el índice en el que se encontraba.
+    */
+    var numeros = [-2,4,5,12,-4,-5]
+
+
+    function verificadora (arr1){
+    var finalArr = [];
+for (let i = 0 ; i<arr1.length;i++){  // recorro y guardo en otra variable los negativos en caso de existir 
+    var negativos = arr1[i];
+    var indice = i
     
-</body>
+    if(negativos<0){
+        finalArr.push(negativos)   // push a arreglo de guardado negativo
+        console.log("la posicion en que se encuentra el negativo es ", indice)
+    }}
+    // comprobamos si existen numeros negativos guardados en el nuevo array creado
+    if (finalArr.length>= 1) {
+        console.log("Error, existen numeros negativos en tu array ",finalArr )
+    } else {
+        console.log("exito no hay numeros negativos en tu array")
+    }  
+    
+}
+// ejecutamos la funcion 
+verificadora(numeros);
+
+
+/*
+Dado el siguiente arreglo [200,5500,900,7000,500,300] con los valores de cada
+producto
+○ Crea una función que retorne el valor del producto más costoso.
+○ Crea una función que retorne el valor del producto menos costoso.
+*/
+var arrNumeros=[200,5500,900,7000,500,300]
+function maximoNumber(unArreglo){
+       var maximo = Math.max(...unArreglo)
+       return maximo
+      }
+       // creo variable para maximo y no perder dato 
+       var valorMaximo = maximoNumber(arrNumeros);
+       console.log("el maximo valor de este arreglo es :",valorMaximo);
+
+
+       function minNumber(unArreglo){
+       var maximo = Math.min(...unArreglo)
+       return maximo
+      }
+       // creo variable para maximo y no perder dato 
+       var valorMinimo = minNumber(arrNumeros);
+       console.log("el minimo valor de este arreglo es :",valorMinimo);
+
+
+    </script>
+  </body>
 </html>

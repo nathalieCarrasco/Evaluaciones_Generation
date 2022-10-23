@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeros = [-2,2,3,4,56,-2]
+/*         let nuevoArr = [];
+
+for (let i = 0; i<numeros.length; i++) {
+  var negativos = numeros[i];
+  if (negativos < 0) {
+    nuevoArr.push(negativos)
+  }
+  else{
+    console.log("noexisten numeros negativos a mostrar")
+  }
+}
+
+console.log(nuevoArr); */
+// ingreso de array a la funcion verificadora 
+function verificadora (arr1){
+    var finalArr = [];
+for (let i = 0 ; i<arr1.length;i++){  // recorro y guardo en otra variable los negativos en caso de existir 
+    var negativos = arr1[i];
+    var indice = i
+    
+    if(negativos<0){
+        finalArr.push(negativos)   // push a arreglo de guardado negativo
+        console.log("la posicion en que se encuentra el negativo es ", indice)
+    }}
+    // comprobamos si existen numeros negativos guardados en el nuevo array creado
+    if (finalArr.length>= 1) {
+        console.log("Error, existen numeros negativos en tu array ",finalArr )
+    } else {
+        console.log("exito no hay numeros negativos en tu array")
+    }  
+    
+}
+// ejecutamos la funcion 
+verificadora(numeros);
+
+    </script>
+</body>
+</html>
