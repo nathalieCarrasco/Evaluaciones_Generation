@@ -47,6 +47,22 @@ console.log("la temperatura ingresada corresponde a " + calculoFinal+ "° Grados
 
 
 /*-------------------------------------------------------------------------------------*/
+/* 
+- Pedir un número a un usuario a través de un prompt y luego dividirlo por 10, ejemplo: 5 / 10  igual 0.5 */
+
+var num = parseInt(prompt("ingrese un numero",40));
+
+function divisible10(numero){ 
+    var resultado = num / 10 ;
+        if(resultado<0){
+        console.log("el resultado de tu division es un numero menor a 0")
+}  
+    return resultado
+}
+
+var total3= divisible10(num);
+console.log("el resultado es;"+ total3);
+
 
     </script>
 </body>
